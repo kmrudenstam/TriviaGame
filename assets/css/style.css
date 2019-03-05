@@ -1,0 +1,11 @@
+body {
+    background-image: url("../images/background3.jpg");
+}
+
+.quiz, .summary {
+    display: none;
+}
+
+.selected {
+    background-color: aqua;
+}
