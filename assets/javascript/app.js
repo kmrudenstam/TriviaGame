@@ -2,22 +2,22 @@
 var questions = [
   {
     title: "Britney Spears' first song was...?",
-    answers: ['A. Sometimes', 'B. Baby One More Time', 'C. Oops! I Did It Again', 'D. Toxic'],
+    answers: ['Sometimes', 'Baby One More Time', 'Oops! I Did It Again', 'Toxic'],
     correct: 1
   },
   {
     title: "Which basketball player was in 'Space Jam'?",
-    answers: ['A. Dennis Rodman', 'B. Kobe Bryant', 'C. Tim Hardaway', 'D. Michael Jordan'],
+    answers: ['Dennis Rodman', 'Kobe Bryant', 'Tim Hardaway', 'Michael Jordan'],
     correct: 3
     }, 
   {
     title: "NSYNC consisted of Justin Timberlake, Lance Bass, JC Chasez, Joey Fatone, and _______?",
-    answers: ['A. Brian Litrell', 'B. Nick Carter', 'C. Chris Kirkpatrick', 'D. Joey McIntyre'],
+    answers: ['Brian Litrell', 'Nick Carter', 'Chris Kirkpatrick', 'Joey McIntyre'],
     correct: 2
   }, 
   {
     title: "'Tamagotchi' is a Japanese portmanteau of what two words?",
-    answers: ['A. Egg + Friend','B. Egg + Computer', 'C. Egg + Watch', 'D. Egg + Pet'],
+    answers: ['Egg + Friend','Egg + Computer', 'Egg + Watch', 'Egg + Pet'],
     correct: 2
   }
 ];
@@ -99,22 +99,24 @@ function checkAnswer(guess) {
     showSummary();
   } else {
     showQuestion();
-    
   }
 }
 
 function showSummary() {
   $('.quiz').hide();
   $('.summary').show();
-  $('.summary p').text("Congrats! You scored " + score + " out of " + questions.length + " correct!");
+  $('.summary h2').text("Congrats! You scored " + score + " out of " + questions.length + " correct!");
+  $('.timer').hide();
+  time = 0;
+  alert = function(){
+  }
 }
 
 function restart() {
   $('.summary').hide();
   $('.quiz').show();
-  timer = 20;
   score = 0;
   currentQuestion = 0;
   showQuestion();
-  timerHolder();
+  // need to make timer reset when game restarts
 }

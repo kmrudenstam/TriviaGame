@@ -1,11 +1,45 @@
 body {
-    background-image: url("../images/background3.jpg");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img-initial {
+    background: url('../images/90s.jpeg') no-repeat center top;
+    height: 520px;
+    margin-bottom: -10%;
+}
+
+.container {
+    max-width: 960px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.timer {
+    font-size: 22px;
 }
 
 .quiz, .summary {
     display: none;
+    width: 100%;
+}
+
+.summary {
+    margin-top: 30%;
 }
 
 .selected {
-    background-color: aqua;
+    background-color: thistle;
+    border-radius: 5px;
+}
+
+#start, #next, #restart {
+    width: 200px;
+    background-color: thistle;
+    border-radius: 20px;
+    border-color: darkslategray;
+    font-size: 24px;
+    color: darkslategray;
+    cursor: pointer;
 }
